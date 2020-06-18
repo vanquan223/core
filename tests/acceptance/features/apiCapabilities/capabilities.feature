@@ -80,14 +80,14 @@ Feature: capabilities
   Scenario: getting default capabilities with admin user
     When the administrator retrieves the capabilities using the capabilities API
     Then the capabilities should contain
-      | capability    | path_to_element                                          | value             |
-      | files_sharing | user@@@expire_date@@@enabled                             | EMPTY             |
-      | files_sharing | group@@@expire_date@@@enabled                            | EMPTY             |
-      | files_sharing | providers_capabilities@@@ocinternal@@@user@@@element[0]  | shareExpiration   |
-      | files_sharing | providers_capabilities@@@ocinternal@@@group@@@element[0] | shareExpiration   |
-      | files_sharing | providers_capabilities@@@ocinternal@@@link@@@element[0]  | shareExpiration   |
-      | files_sharing | providers_capabilities@@@ocinternal@@@link@@@element[1]  | passwordProtected |
-      | files_sharing | providers_capabilities@@@ocFederatedSharing@@@remote     | EMPTY             |
+      | capability    | path_to_element                                                       | value             |
+      | files_sharing | user@@@expire_date@@@enabled                                          | EMPTY             |
+      | files_sharing | group@@@expire_date@@@enabled                                         | EMPTY             |
+      | files_sharing | providers_capabilities@@@ocinternal@@@user@@@element[0]               | shareExpiration   |
+      | files_sharing | providers_capabilities@@@ocinternal@@@group@@@element[0]              | shareExpiration   |
+      | files_sharing | providers_capabilities@@@ocinternal@@@link@@@element[0]               | shareExpiration   |
+      | files_sharing | providers_capabilities@@@ocinternal@@@link@@@element[1]               | passwordProtected |
+      | files_sharing | providers_capabilities@@@ocFederatedSharing@@@remote@@@element[0]     | shareExpiration   |
 
   @files_trashbin-app-required
   Scenario: getting trashbin app capability with admin user
