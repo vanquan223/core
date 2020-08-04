@@ -1887,7 +1887,7 @@ class Share extends Constants {
 				if (isset($row['parent'])) {
 					$query = \OC_DB::prepare('SELECT `file_target` FROM `*PREFIX*share` WHERE `id` = ?');
 					$parentResult = $query->execute([$row['parent']]);
-					if ($result === false) {
+					if ($parentResult === false) {
 						\OCP\Util::writeLog('OCP\Share', 'Can\'t select parent: ' .
 							\OC_DB::getErrorMessage() . ', select=' . $select . ' where=' . $where,
 							\OCP\Util::ERROR);
